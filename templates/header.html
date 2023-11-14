@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Kate's Portfolio</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+        />
+        <link rel="stylesheet" href="static/styles.css" />
+        <link
+            rel="shortcut icon"
+            href="{{ url_for('static', filename='images/favicon.ico') }}"
+            type="image/x-icon"
+        />
+        <script
+            defer
+            src="{{ url_for('static', filename='scripts/scripts.js') }}"
+        ></script>
+    </head>
+    <body>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand is-flex is-justify-content-center">
+                <a class="navbar-item" href="{{url_for('home')}}">
+                    <svg
+                        height="60"
+                        version="1.1"
+                        viewBox="0.0 0.0 960.0 540.0"
+                        fill="none"
+                        stroke="none"
+                        stroke-linecap="square"
+                        stroke-miterlimit="10"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <clipPath id="g299ab457917_0_547.0">
+                            <path
+                                d="m0 0l960.0 0l0 540.0l-960.0 0l0 -540.0z"
+                                clip-rule="nonzero"
+                            />
+                        </clipPath>
+                        <g clip-path="url(#g299ab457917_0_547.0)">
+                            <path
+                                fill="#fdfdfd"
+                                d="m0 0l960.0 0l0 540.0l-960.0 0z"
+                                fill-rule="evenodd"
+                            />
+                            <path
+                                fill="#fdfdfd"
+                                d="m264.0 270.0l0 0c0 -119.2935 96.70648 -216.0 216.0 -216.0l0 0c57.286743 0 112.227234 22.75708 152.73505 63.26494c40.507874 40.50786 63.264954 95.4483 63.264954 152.73506l0 0c0 119.29352 -96.70648 216.0 -216.0 216.0l0 0c-119.29352 0 -216.0 -96.70648 -216.0 -216.0z"
+                                fill-rule="evenodd"
+                            />
+                            <path
+                                stroke="#512e67"
+                                stroke-width="4.0"
+                                stroke-linejoin="round"
+                                stroke-linecap="butt"
+                                d="m264.0 270.0l0 0c0 -119.2935 96.70648 -216.0 216.0 -216.0l0 0c57.286743 0 112.227234 22.75708 152.73505 63.26494c40.507874 40.50786 63.264954 95.4483 63.264954 152.73506l0 0c0 119.29352 -96.70648 216.0 -216.0 216.0l0 0c-119.29352 0 -216.0 -96.70648 -216.0 -216.0z"
+                                fill-rule="evenodd"
+                            />
+                            <path
+                                fill="#000000"
+                                fill-opacity="0.0"
+                                d="m289.62204 122.58268l380.7559 0l0 262.83466l-380.7559 0z"
+                                fill-rule="evenodd"
+                            />
+                            <path
+                                fill="#512e67"
+                                d="m341.46573 355.58267l0 -167.01564l22.09375 0l0 82.82814l82.9375 -82.82814l29.96875 0l-70.0625 67.67189l73.140625 99.34375l-29.171875 0l-59.46875 -84.53125l-27.34375 26.65625l0 57.875l-22.09375 0zm155.62802 0l0 -167.01564l22.09375 0l0 82.82814l82.9375 -82.82814l29.96875 0l-70.0625 67.67189l73.140625 99.34375l-29.171875 0l-59.46875 -84.53125l-27.34375 26.65625l0 57.875l-22.09375 0z"
+                                fill-rule="nonzero"
+                            />
+                        </g>
+                    </svg>
+                </a>
+                <a
+                    role="button"
+                    class="navbar-burger"
+                    aria-label="menu"
+                    aria-expanded="false"
+                    data-target="navMenu"
+                >
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navMenu" class="navbar-menu is-shadowless">
+                <div class="navbar-start"></div>
+                <div class="navbar-end">
+                    <div class="navbar-item is-centered">
+                        <a
+                            class="button is-primary is-outlined is-rounded"
+                            href="mailto:kochina.ev@gmail.com"
+                        >
+                            <strong>Contact Me</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </body>
+</html>

@@ -1,747 +1,261 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Kate's Portfolio</title>
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-        />
-        <link rel="stylesheet" href="static/styles.css" />
-        <link
-            rel="shortcut icon"
-            href="{{ url_for('static', filename='images/favicon.ico') }}"
-            type="image/x-icon"
-        />
-        <script defer src="{{ url_for('static', filename='scripts/scripts.js') }}"></script>
-    </head>
-    <body>
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand is-flex is-justify-content-center">
-                <a class="navbar-item" href="/">
-                    <svg
-                        height="60"
-                        version="1.1"
-                        viewBox="0.0 0.0 960.0 540.0"
-                        fill="none"
-                        stroke="none"
-                        stroke-linecap="square"
-                        stroke-miterlimit="10"
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <clipPath id="g299ab457917_0_547.0">
-                            <path
-                                d="m0 0l960.0 0l0 540.0l-960.0 0l0 -540.0z"
-                                clip-rule="nonzero"
-                            />
-                        </clipPath>
-                        <g clip-path="url(#g299ab457917_0_547.0)">
-                            <path
-                                fill="#fdfdfd"
-                                d="m0 0l960.0 0l0 540.0l-960.0 0z"
-                                fill-rule="evenodd"
-                            />
-                            <path
-                                fill="#fdfdfd"
-                                d="m264.0 270.0l0 0c0 -119.2935 96.70648 -216.0 216.0 -216.0l0 0c57.286743 0 112.227234 22.75708 152.73505 63.26494c40.507874 40.50786 63.264954 95.4483 63.264954 152.73506l0 0c0 119.29352 -96.70648 216.0 -216.0 216.0l0 0c-119.29352 0 -216.0 -96.70648 -216.0 -216.0z"
-                                fill-rule="evenodd"
-                            />
-                            <path
-                                stroke="#512e67"
-                                stroke-width="4.0"
-                                stroke-linejoin="round"
-                                stroke-linecap="butt"
-                                d="m264.0 270.0l0 0c0 -119.2935 96.70648 -216.0 216.0 -216.0l0 0c57.286743 0 112.227234 22.75708 152.73505 63.26494c40.507874 40.50786 63.264954 95.4483 63.264954 152.73506l0 0c0 119.29352 -96.70648 216.0 -216.0 216.0l0 0c-119.29352 0 -216.0 -96.70648 -216.0 -216.0z"
-                                fill-rule="evenodd"
-                            />
-                            <path
-                                fill="#000000"
-                                fill-opacity="0.0"
-                                d="m289.62204 122.58268l380.7559 0l0 262.83466l-380.7559 0z"
-                                fill-rule="evenodd"
-                            />
-                            <path
-                                fill="#512e67"
-                                d="m341.46573 355.58267l0 -167.01564l22.09375 0l0 82.82814l82.9375 -82.82814l29.96875 0l-70.0625 67.67189l73.140625 99.34375l-29.171875 0l-59.46875 -84.53125l-27.34375 26.65625l0 57.875l-22.09375 0zm155.62802 0l0 -167.01564l22.09375 0l0 82.82814l82.9375 -82.82814l29.96875 0l-70.0625 67.67189l73.140625 99.34375l-29.171875 0l-59.46875 -84.53125l-27.34375 26.65625l0 57.875l-22.09375 0z"
-                                fill-rule="nonzero"
-                            />
-                        </g>
-                    </svg>
-                </a>
-                <a
-                    role="button"
-                    class="navbar-burger"
-                    aria-label="menu"
-                    aria-expanded="false"
-                    data-target="navMenu">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
+{% include 'header.html' %}
 
-            <div id="navMenu" class="navbar-menu is-shadowless">
-                <div class="navbar-start"></div>
-                <div class="navbar-end">
-                    <div class="navbar-item is-centered">
-                        <a
-                            class="button is-primary is-outlined is-rounded"
-                            href="#"
-                        >
-                            <strong>Contact Me</strong>
-                        </a>
-                    </div>
+<section class="hero has-text-centered">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-6 is-spaced">
+                    <h1 class="title">
+                        Welcome into the world of programming journeys
+                    </h1>
+                    <br />
+                    <p class="subtitle">
+                        Hey, it's Kate - your testing ninja, data wizard, and
+                        Python sorceress, ready to ride the exhilarating
+                        rollercoaster of new beginnings!
+                    </p>
                 </div>
             </div>
-        </nav>
+            <img
+                src="static/images/kate-avatar.png"
+                alt="kate-avatar"
+                class="avatar image1"
+            />
 
-        <section class="hero has-text-centered">
-            <div class="hero-body">
-                <div class="container">
-                    <div class="columns is-centered">
-                        <div class="column is-6 is-spaced">
-                            <h1 class="title">
-                                Welcome into the world of programming journeys
-                            </h1>
-                            <br />
-                            <p class="subtitle">
-                                Hey, it's Kate - your testing ninja, data
-                                wizard, and Python sorceress, ready to ride the
-                                exhilarating rollercoaster of new beginnings!
-                            </p>
-                        </div>
-                    </div>
-                    <img
-                        src="static/images/kate-avatar.png"
-                        alt="kate-avatar"
-                        class="avatar image1"
-                    />
+            <img
+                src="static/images/cozy-desk.png"
+                alt="cozy-desk"
+                class="image2"
+            />
+        </div>
+    </div>
+</section>
 
-                    <img
-                        src="static/images/cozy-desk.png"
-                        alt="cozy-desk"
-                        class="image2"
-                    />
-                </div>
+<section class="section is-primary has-text-centered">
+    <div class="container" id="greetings">
+        <div class="columns is-centered">
+            <div class="column is-9">
+                <p class="subtitle">
+                    Greetings, fellow wanderers of the coding realm! Step into
+                    the realm where whimsical testing sorcerers and bug ninjas
+                    weave enchanting spells to transform your coding journey
+                    into a magical fiesta. Whether you're a coding wanderer or a
+                    seasoned wizard, join us on a quest through UI acrobatics,
+                    backend wizardry, and the art of turning bugs into confetti.
+                    Embrace the magic of Agile and Scrum, where we don't just
+                    play; we are the party planners of the coding universe.
+                    Let's sprinkle a bit of enchantment on your coding
+                    adventures together!
+                </p>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <section class="section is-primary has-text-centered">
-            <div class="container" id="greetings-div">
-                <div class="columns is-centered">
-                    <div class="column is-9">
-                        <p class="subtitle">
-                            Greetings, fellow wanderers of the coding realm!
-                            Step into the realm where whimsical testing
-                            sorcerers and bug ninjas weave enchanting spells to
-                            transform your coding journey into a magical fiesta.
-                            Whether you're a coding wanderer or a seasoned
-                            wizard, join us on a quest through UI acrobatics,
-                            backend wizardry, and the art of turning bugs into
-                            confetti. Embrace the magic of Agile and Scrum,
-                            where we don't just play; we are the party planners
-                            of the coding universe. Let's sprinkle a bit of
-                            enchantment on your coding adventures together!
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="content">
-                    <div class="columns is-centered">
-                        <div class="column is-one-third">
-                            <div class="card">
-                                <span></span>
-                                <h3>Data</h3>
-                                <div class="card-content">
-                                    <div class="content">
-                                        <p>
-                                            For a data wizard, data is the raw
-                                            material of magic, and data analysis
-                                            is the enchanted process of
-                                            deciphering, transforming, and
-                                            extracting insights to conjure a
-                                            realm of strategic wizardry. This
-                                            mystical journey is navigated with
-                                            expertise professionally using
-                                            different data tools to unveil the
-                                            hidden patterns and unveil the
-                                            secrets that lie within the vast
-                                            expanse of information
-                                        </p>
-                                        <br />
-                                        <div
-                                            class="tags are-medium is-centered"
-                                        >
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                            >
-                                                <b>Google Spreadsheets</b>
-                                            </span>
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                            >
-                                                <b>Microsoft Excel</b>
-                                            </span>
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                            >
-                                                <b>Python Scripting</b>
-                                            </span>
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                            >
-                                                <b>pandas</b>
-                                            </span>
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                            >
-                                                <b>SQL</b>
-                                            </span>
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                            >
-                                                <b>SQL SSMS</b>
-                                            </span>
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                            >
-                                                <b>MySQL DB</b>
-                                            </span>
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                            >
-                                                <b>MongoDB</b>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="column is-one-third">
-                            <div class="card">
-                                <span></span>
-                                <h3>Testing</h3>
-                                <div class="card-content">
-                                    <div class="content">
-                                        <p>
-                                            For testing ninja, testing is a
-                                            skillful and stealthy pursuit, where
-                                            bugs are hunted with precision in
-                                            the intricate labyrinth of code.
-                                            This agile process ensures a
-                                            flawless software performance,
-                                            embodying the art of code mastery,
-                                            and being a master in various
-                                            testing tools and methodologies
-                                        </p>
-                                        <br />
-
-                                        <div
-                                            class="tags are-medium is-centered"
-                                        >
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                            >
-                                                <b>Functional Testing</b>
-                                            </span>
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                                ><b>UI Testing</b></span
-                                            >
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                                ><b>Usability Testing</b></span
-                                            >
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                                ><b>API Testing</b></span
-                                            >
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                                ><b>Load Testing</b></span
-                                            >
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                                ><b
-                                                    >Performance Testing</b
-                                                ></span
-                                            >
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                                ><b>Smoke Testing</b>
-                                            </span>
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                                ><b>Sanity Testing</b>
-                                            </span>
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                                ><b>Regression Testing</b>
-                                            </span>
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                                ><b
-                                                    >Multiplatform Testing</b
-                                                ></span
-                                            >
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                                ><b>Automation Testing</b></span
-                                            >
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                                ><b>Python</b></span
-                                            >
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                                ><b>pytest</b></span
-                                            >
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                                ><b>unittests</b></span
-                                            >
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                                ><b>requests</b></span
-                                            >
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                                ><b>Selenium</b></span
-                                            >
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                                ><b>Postman</b></span
-                                            >
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                                ><b>Insomnia</b></span
-                                            >
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                                ><b>Baretail</b></span
-                                            >
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                                ><b>Clumsy</b></span
-                                            >
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                                ><b>JMeter</b></span
-                                            >
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                                ><b>ZeroMQ</b></span
-                                            >
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                                ><b>RabbitMQ</b></span
-                                            >
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                                ><b>Microsoft VMM</b></span
-                                            >
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="column is-one-third">
-                            <div class="card">
-                                <span></span>
-                                <h3>Development</h3>
-                                <div class="card-content">
-                                    <div class="content">
-                                        <p>
-                                            For a Python sorceress, development
-                                            is the mystical journey of conjuring
-                                            elegant spells with the language's
-                                            enchanting syntax, crafting powerful
-                                            incantations to shape digital realms
-                                            and bring forth software magic. For
-                                            a novice Python developer, mastering
-                                            the mystical arts requires embracing
-                                            professional tools that amplify the
-                                            coding skills and these tools is
-                                            akin to acquiring a magical wand
-                                        </p>
-                                        <br />
-                                        <div
-                                            class="tags are-medium is-centered"
-                                        >
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                            >
-                                                <b>Python</b>
-                                            </span>
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                            >
-                                                <b>Git</b>
-                                            </span>
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                            >
-                                                <b>VS Code</b>
-                                            </span>
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                            >
-                                                <b>Flask</b>
-                                            </span>
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                            >
-                                                <b>pytest</b>
-                                            </span>
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                            >
-                                                <b>unittests</b>
-                                            </span>
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                            >
-                                                <b>Web Scraping</b>
-                                            </span>
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                            >
-                                                <b>Python Scripting</b>
-                                            </span>
-                                            <span
-                                                class="tag is-normal is-rounded"
-                                            >
-                                                <b>SQLite</b>
-                                            </span>
-                                        </div>
-                                    </div>
+    <div class="container">
+        <div class="content">
+            <div class="columns is-centered">
+                
+                <div class="column is-one-third">
+                    <div class="card">
+                        <span></span>
+                        <h3>Data</h3>
+                        <div class="card-content">
+                            <div class="content">
+                                <p>
+                                    For a data wizard, data is the raw material
+                                    of magic, and data analysis is the enchanted
+                                    process of deciphering, transforming, and
+                                    extracting insights to conjure a realm of
+                                    strategic wizardry. This mystical journey is
+                                    navigated with expertise professionally
+                                    using different data tools to unveil the
+                                    hidden patterns and unveil the secrets that
+                                    lie within the vast expanse of information
+                                </p>
+                                <br />
+                                <div class="tags are-medium is-centered">
+                                    <span class="tag is-normal is-rounded">
+                                        <b>Google Spreadsheets</b>
+                                    </span>
+                                    <span class="tag is-normal is-rounded">
+                                        <b>Microsoft Excel</b>
+                                    </span>
+                                    <span class="tag is-normal is-rounded">
+                                        <b>Python Scripting</b>
+                                    </span>
+                                    <span class="tag is-normal is-rounded">
+                                        <b>pandas</b>
+                                    </span>
+                                    <span class="tag is-normal is-rounded">
+                                        <b>SQL</b>
+                                    </span>
+                                    <span class="tag is-normal is-rounded">
+                                        <b>SQL SSMS</b>
+                                    </span>
+                                    <span class="tag is-normal is-rounded">
+                                        <b>MySQL DB</b>
+                                    </span>
+                                    <span class="tag is-normal is-rounded">
+                                        <b>MongoDB</b>
+                                    </span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <footer class="section has-text-centered">
-            <div class="container">
-                <div class="columns is-centered">
-                    <div class="column is-9">
-                        <a
-                            href="https://www.linkedin.com/in/kateryna-kochina/"
-                            target="_blank"
-                        >
-                            <svg
-                                height="60"
-                                version="1.1"
-                                viewBox="0.0 0.0 960.0 540.0"
-                                fill="none"
-                                stroke="none"
-                                stroke-linecap="square"
-                                stroke-miterlimit="10"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <clipPath id="g299ab457917_0_552.0">
-                                    <path
-                                        d="m0 0l960.0 0l0 540.0l-960.0 0l0 -540.0z"
-                                        clip-rule="nonzero"
-                                    />
-                                </clipPath>
-                                <g clip-path="url(#g299ab457917_0_552.0)">
-                                    <path
-                                        fill="#fdfdfd"
-                                        d="m0 0l960.0 0l0 540.0l-960.0 0z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        fill="#512e67"
-                                        d="m264.0 270.0l0 0c0 -119.2935 96.70648 -216.0 216.0 -216.0l0 0c57.286743 0 112.227234 22.75708 152.73505 63.26494c40.507874 40.50786 63.264954 95.4483 63.264954 152.73506l0 0c0 119.29352 -96.70648 216.0 -216.0 216.0l0 0c-119.29352 0 -216.0 -96.70648 -216.0 -216.0z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        stroke="#512e67"
-                                        stroke-width="4.0"
-                                        stroke-linejoin="round"
-                                        stroke-linecap="butt"
-                                        d="m264.0 270.0l0 0c0 -119.2935 96.70648 -216.0 216.0 -216.0l0 0c57.286743 0 112.227234 22.75708 152.73505 63.26494c40.507874 40.50786 63.264954 95.4483 63.264954 152.73506l0 0c0 119.29352 -96.70648 216.0 -216.0 216.0l0 0c-119.29352 0 -216.0 -96.70648 -216.0 -216.0z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        fill="#000000"
-                                        fill-opacity="0.0"
-                                        d="m302.68765 103.85827l380.7559 0l0 262.83463l-380.7559 0z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        fill="#fdfdfd"
-                                        d="m413.02264 198.48514l0 -25.078125l21.796875 0l0 25.078125l-21.796875 0zm0 152.45312l0 -128.60938l21.796875 0l0 128.60938l-21.796875 0zm54.972656 0l0 -128.60938l19.625 0l0 18.296875q14.171875 -21.203125 40.921875 -21.203125q11.625 0 21.375 4.1875q9.75 4.171875 14.59375 10.953125q4.84375 6.78125 6.78125 16.109375q1.21875 6.046875 1.21875 21.1875l0 79.078125l-21.796875 0l0 -78.234375q0 -13.3125 -2.546875 -19.90625q-2.546875 -6.609375 -9.03125 -10.546875q-6.46875 -3.9375 -15.1875 -3.9375q-13.921875 0 -24.046875 8.84375q-10.109375 8.84375 -10.109375 33.546875l0 70.234375l-21.796875 0z"
-                                        fill-rule="nonzero"
-                                    />
-                                </g>
-                            </svg>
-                        </a>
-                        <a
-                            href="https://github.com/kateryna-kochina"
-                            target="_blank"
-                        >
-                            <svg
-                                height="60"
-                                version="1.1"
-                                viewBox="0.0 0.0 960.0 540.0"
-                                fill="none"
-                                stroke="none"
-                                stroke-linecap="square"
-                                stroke-miterlimit="10"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <clipPath id="g299ab457917_0_590.0">
-                                    <path
-                                        d="m0 0l960.0 0l0 540.0l-960.0 0l0 -540.0z"
-                                        clip-rule="nonzero"
-                                    />
-                                </clipPath>
-                                <g clip-path="url(#g299ab457917_0_590.0)">
-                                    <path
-                                        fill="#ffffff"
-                                        d="m0 0l960.0 0l0 540.0l-960.0 0z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        fill="#512e67"
-                                        d="m241.19423 273.6601l0 0c0 -119.2935 96.7065 -215.99998 215.99998 -215.99998l0 0c57.286743 0 112.227234 22.757076 152.73505 63.264935c40.507874 40.50785 63.264954 95.448296 63.264954 152.73505l0 0c0 119.29352 -96.70648 216.0 -216.0 216.0l0 0c-119.29349 0 -215.99998 -96.70648 -215.99998 -216.0z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        stroke="#512e67"
-                                        stroke-width="4.0"
-                                        stroke-linejoin="round"
-                                        stroke-linecap="butt"
-                                        d="m241.19423 273.6601l0 0c0 -119.2935 96.7065 -215.99998 215.99998 -215.99998l0 0c57.286743 0 112.227234 22.757076 152.73505 63.264935c40.507874 40.50785 63.264954 95.448296 63.264954 152.73505l0 0c0 119.29352 -96.70648 216.0 -216.0 216.0l0 0c-119.29349 0 -215.99998 -96.70648 -215.99998 -216.0z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        fill="#ffffff"
-                                        d="m436.79672 352.6496l36.663788 0l0 0c9.902496 0 19.399414 3.9337463 26.40152 10.935883c7.0021057 7.0021057 10.935883 16.499023 10.935883 26.40152l0 105.276794c0 4.8828125E-4 -4.272461E-4 9.1552734E-4 -9.460449E-4 9.1552734E-4l-111.33765 -9.1552734E-4l0 0c-5.187988E-4 0 -9.1552734E-4 -4.272461E-4 -9.1552734E-4 -9.460449E-4l9.1552734E-4 -105.27585l0 0c0 -20.62088 16.716522 -37.337402 37.337402 -37.337402z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        stroke="#fdfdfd"
-                                        stroke-width="1.0"
-                                        stroke-linejoin="round"
-                                        stroke-linecap="butt"
-                                        d="m436.79672 352.6496l36.663788 0l0 0c9.902496 0 19.399414 3.9337463 26.40152 10.935883c7.0021057 7.0021057 10.935883 16.499023 10.935883 26.40152l0 105.276794c0 4.8828125E-4 -4.272461E-4 9.1552734E-4 -9.460449E-4 9.1552734E-4l-111.33765 -9.1552734E-4l0 0c-5.187988E-4 0 -9.1552734E-4 -4.272461E-4 -9.1552734E-4 -9.460449E-4l9.1552734E-4 -105.27585l0 0c0 -20.62088 16.716522 -37.337402 37.337402 -37.337402z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        fill="#ffffff"
-                                        d="m318.4777 258.2546l0 0c0 -54.98497 60.825806 -99.55907 135.85828 -99.55907l0 0c75.03244 0 135.85825 44.574097 135.85825 99.55907l0 0c0 54.984924 -60.825806 99.55905 -135.85825 99.55905l0 0c-75.03247 0 -135.85828 -44.574127 -135.85828 -99.55905z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        stroke="#fdfdfd"
-                                        stroke-width="1.0"
-                                        stroke-linejoin="round"
-                                        stroke-linecap="butt"
-                                        d="m318.4777 258.2546l0 0c0 -54.98497 60.825806 -99.55907 135.85828 -99.55907l0 0c75.03244 0 135.85825 44.574097 135.85825 99.55907l0 0c0 54.984924 -60.825806 99.55905 -135.85825 99.55905l0 0c-75.03247 0 -135.85828 -44.574127 -135.85828 -99.55905z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        fill="#ffffff"
-                                        d="m341.29538 235.45674c-0.9507446 -2.5348206 -3.802948 -8.083496 -5.7044067 -15.208908c-1.9014587 -7.125412 -4.832672 -18.499786 -5.704376 -27.54358c-0.8717346 -9.043793 -0.6346741 -19.662094 0.47406006 -26.719177c1.1087646 -7.057083 3.9601135 -12.060623 6.178467 -15.623322c2.2183838 -3.5627136 2.6950378 -5.6162567 7.1318054 -5.7529144c4.436737 -0.13665771 13.388397 2.2615051 19.488708 4.932968c6.1003113 2.6714783 10.299164 5.6147766 17.11316 11.095871c6.814026 5.481079 17.907593 15.692383 23.770874 21.79065c5.8632812 6.0982666 20.441162 5.6184845 11.408783 14.798935c-9.032379 9.18045 -52.292816 33.70645 -65.60306 40.283768c-13.310272 6.577301 -12.356964 1.1667633 -14.258423 -0.8199463c-1.9014587 -1.9866943 1.4239502 -7.8799896 2.84964 -11.100311c1.4256592 -3.2203217 4.753662 -6.851349 5.704376 -8.221634"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        stroke="#fdfdfd"
-                                        stroke-width="1.0"
-                                        stroke-linejoin="round"
-                                        stroke-linecap="butt"
-                                        d="m341.29538 235.45674c-0.9507446 -2.5348206 -3.802948 -8.083496 -5.7044067 -15.208908c-1.9014587 -7.125412 -4.832672 -18.499786 -5.704376 -27.54358c-0.8717346 -9.043793 -0.6346741 -19.662094 0.47406006 -26.719177c1.1087646 -7.057083 3.9601135 -12.060623 6.178467 -15.623322c2.2183838 -3.5627136 2.6950378 -5.6162567 7.1318054 -5.7529144c4.436737 -0.13665771 13.388397 2.2615051 19.488708 4.932968c6.1003113 2.6714783 10.299164 5.6147766 17.11316 11.095871c6.814026 5.481079 17.907593 15.692383 23.770874 21.79065c5.8632812 6.0982666 20.441162 5.6184845 11.408783 14.798935c-9.032379 9.18045 -52.292816 33.70645 -65.60306 40.283768c-13.310272 6.577301 -12.356964 1.1667633 -14.258423 -0.8199463c-1.9014587 -1.9866943 1.4239502 -7.8799896 2.84964 -11.100311c1.4256592 -3.2203217 4.753662 -6.851349 5.704376 -8.221634"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        fill="#ffffff"
-                                        d="m574.59735 235.45674c0.99920654 -2.5348206 3.9968262 -8.083496 5.9952393 -15.208908c1.9984131 -7.125412 5.0790405 -18.499786 5.9952393 -27.54358c0.9161377 -9.043793 0.6669922 -19.662094 -0.49829102 -26.719177c-1.1652832 -7.057083 -4.1619873 -12.060623 -6.493469 -15.623322c-2.331482 -3.5627136 -2.8324585 -5.6162567 -7.4953613 -5.7529144c-4.662964 -0.13665771 -14.071045 2.2615051 -20.48236 4.932968c-6.411377 2.6714783 -10.82428 5.6147766 -17.985718 11.095871c-7.161438 5.481079 -18.820618 15.692383 -24.98285 21.79065c-6.1622314 6.0982666 -21.483368 5.6184845 -11.9904785 14.798935c9.49292 9.18045 54.959045 33.70645 68.947876 40.283768c13.988892 6.577301 12.9869995 1.1667633 14.985413 -0.8199463c1.9984131 -1.9866943 -1.496582 -7.8799896 -2.994934 -11.100311c-1.498352 -3.2203217 -4.9960327 -6.851349 -5.9952393 -8.221634"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        stroke="#fdfdfd"
-                                        stroke-width="1.0"
-                                        stroke-linejoin="round"
-                                        stroke-linecap="butt"
-                                        d="m574.59735 235.45674c0.99920654 -2.5348206 3.9968262 -8.083496 5.9952393 -15.208908c1.9984131 -7.125412 5.0790405 -18.499786 5.9952393 -27.54358c0.9161377 -9.043793 0.6669922 -19.662094 -0.49829102 -26.719177c-1.1652832 -7.057083 -4.1619873 -12.060623 -6.493469 -15.623322c-2.331482 -3.5627136 -2.8324585 -5.6162567 -7.4953613 -5.7529144c-4.662964 -0.13665771 -14.071045 2.2615051 -20.48236 4.932968c-6.411377 2.6714783 -10.82428 5.6147766 -17.985718 11.095871c-7.161438 5.481079 -18.820618 15.692383 -24.98285 21.79065c-6.1622314 6.0982666 -21.483368 5.6184845 -11.9904785 14.798935c9.49292 9.18045 54.959045 33.70645 68.947876 40.283768c13.988892 6.577301 12.9869995 1.1667633 14.985413 -0.8199463c1.9984131 -1.9866943 -1.496582 -7.8799896 -2.994934 -11.100311c-1.498352 -3.2203217 -4.9960327 -6.851349 -5.9952393 -8.221634"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        fill="#fdfdfd"
-                                        d="m407.69565 396.45178l0 0c-4.1225586 11.828461 -20.106354 17.01065 -35.700775 11.574799c-15.594452 -5.4358826 -24.894226 -19.431396 -20.771667 -31.259857l0 0c4.3161316 9.064758 13.394501 16.67868 24.503937 20.551178c11.109436 3.872528 22.953308 3.5516357 31.968506 -0.8661194z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        stroke="#fdfdfd"
-                                        stroke-width="1.0"
-                                        stroke-linejoin="round"
-                                        stroke-linecap="butt"
-                                        d="m407.69565 396.45178l0 0c-4.1225586 11.828461 -20.106354 17.01065 -35.700775 11.574799c-15.594452 -5.4358826 -24.894226 -19.431396 -20.771667 -31.259857l0 0c4.3161316 9.064758 13.394501 16.67868 24.503937 20.551178c11.109436 3.872528 22.953308 3.5516357 31.968506 -0.8661194z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        fill="#fdfdfd"
-                                        d="m308.4042 357.74796l0 0c8.627808 -7.601532 25.281403 -2.8000488 37.19684 10.724396c11.915436 13.524475 14.580566 30.650452 5.952759 38.251984l0 0c-0.17596436 -10.113129 -5.275238 -21.73529 -13.763763 -31.370087c-8.488556 -9.634796 -19.37558 -16.157654 -29.385834 -17.606293z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        stroke="#fdfdfd"
-                                        stroke-width="1.0"
-                                        stroke-linejoin="round"
-                                        stroke-linecap="butt"
-                                        d="m308.4042 357.74796l0 0c8.627808 -7.601532 25.281403 -2.8000488 37.19684 10.724396c11.915436 13.524475 14.580566 30.650452 5.952759 38.251984l0 0c-0.17596436 -10.113129 -5.275238 -21.73529 -13.763763 -31.370087c-8.488556 -9.634796 -19.37558 -16.157654 -29.385834 -17.606293z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        fill="#fdfdfd"
-                                        d="m405.2047 408.0275l0 0c-6.870941 16.09018 -26.852448 22.957489 -44.629913 15.338562c-17.777496 -7.6188965 -26.618988 -26.838928 -19.748047 -42.929108l0 0c15.234131 19.232025 39.973022 29.834412 64.37796 27.590546z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        stroke="#fdfdfd"
-                                        stroke-width="1.0"
-                                        stroke-linejoin="round"
-                                        stroke-linecap="butt"
-                                        d="m405.2047 408.0275l0 0c-6.870941 16.09018 -26.852448 22.957489 -44.629913 15.338562c-17.777496 -7.6188965 -26.618988 -26.838928 -19.748047 -42.929108l0 0c15.234131 19.232025 39.973022 29.834412 64.37796 27.590546z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        fill="#fdfdfd"
-                                        d="m310.34116 363.10425l0 0c6.2621155 -5.0444946 17.853363 -1.0467834 25.88977 8.929138c8.036377 9.975922 9.474701 22.152374 3.2125854 27.196869l0 0c-4.812134 -14.479736 -15.978882 -28.341492 -29.102356 -36.126007z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        stroke="#fdfdfd"
-                                        stroke-width="1.0"
-                                        stroke-linejoin="round"
-                                        stroke-linecap="butt"
-                                        d="m310.34116 363.10425l0 0c6.2621155 -5.0444946 17.853363 -1.0467834 25.88977 8.929138c8.036377 9.975922 9.474701 22.152374 3.2125854 27.196869l0 0c-4.812134 -14.479736 -15.978882 -28.341492 -29.102356 -36.126007z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        fill="#fdfdfd"
-                                        d="m306.96063 359.86353l0 0c0 -2.278717 3.5746765 -4.126007 7.984253 -4.126007l0 0c4.4095764 0 7.984253 1.84729 7.984253 4.126007l0 0c0 2.278717 -3.5746765 4.1259766 -7.984253 4.1259766l0 0c-4.4095764 0 -7.984253 -1.8472595 -7.984253 -4.1259766z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        stroke="#fdfdfd"
-                                        stroke-width="1.0"
-                                        stroke-linejoin="round"
-                                        stroke-linecap="butt"
-                                        d="m306.96063 359.86353l0 0c0 -2.278717 3.5746765 -4.126007 7.984253 -4.126007l0 0c4.4095764 0 7.984253 1.84729 7.984253 4.126007l0 0c0 2.278717 -3.5746765 4.1259766 -7.984253 4.1259766l0 0c-4.4095764 0 -7.984253 -1.8472595 -7.984253 -4.1259766z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        fill="#fdfdfd"
-                                        d="m430.5433 417.82245l0 0c-36.146393 9.445374 -66.98587 11.243286 -68.8819 4.015747c-1.8960266 -7.227539 25.869354 -20.743591 62.015747 -30.188965c-19.79007 8.472412 -30.64206 16.488892 -29.291351 21.637787c1.3507385 5.1488953 14.7465515 6.829193 36.1575 4.535431z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        stroke="#fdfdfd"
-                                        stroke-width="1.0"
-                                        stroke-linejoin="round"
-                                        stroke-linecap="butt"
-                                        d="m430.5433 417.82245l0 0c-36.146393 9.445374 -66.98587 11.243286 -68.8819 4.015747c-1.8960266 -7.227539 25.869354 -20.743591 62.015747 -30.188965c-19.79007 8.472412 -30.64206 16.488892 -29.291351 21.637787c1.3507385 5.1488953 14.7465515 6.829193 36.1575 4.535431z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        fill="#fdfdfd"
-                                        d="m394.1496 414.15198l0 0c-2.0873718 -7.3666687 9.384003 -17.06836 25.62207 -21.669281l0 0c16.238037 -4.6009216 31.09372 -2.3588257 33.18109 5.0078735l0 0c2.0873718 7.366699 -9.384003 17.06836 -25.62204 21.669281l0 0c-16.238037 4.6009216 -31.09372 2.3588257 -33.18112 -5.0078735z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        stroke="#fdfdfd"
-                                        stroke-width="1.0"
-                                        stroke-linejoin="round"
-                                        stroke-linecap="butt"
-                                        d="m394.1496 414.15198l0 0c-2.0873718 -7.3666687 9.384003 -17.06836 25.62207 -21.669281l0 0c16.238037 -4.6009216 31.09372 -2.3588257 33.18109 5.0078735l0 0c2.0873718 7.366699 -9.384003 17.06836 -25.62204 21.669281l0 0c-16.238037 4.6009216 -31.09372 2.3588257 -33.18112 -5.0078735z"
-                                        fill-rule="evenodd"
-                                    />
-                                </g>
-                            </svg>
-                        </a>
-                        <a href="#"
-                            ><svg
-                                height="60"
-                                version="1.1"
-                                viewBox="0.0 0.0 960.0 540.0"
-                                fill="none"
-                                stroke="none"
-                                stroke-linecap="square"
-                                stroke-miterlimit="10"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <clipPath id="g299ab457917_0_562.0">
-                                    <path
-                                        d="m0 0l960.0 0l0 540.0l-960.0 0l0 -540.0z"
-                                        clip-rule="nonzero"
-                                    />
-                                </clipPath>
-                                <g clip-path="url(#g299ab457917_0_562.0)">
-                                    <path
-                                        fill="#fdfdfd"
-                                        d="m0 0l960.0 0l0 540.0l-960.0 0z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        fill="#fdfdfd"
-                                        d="m264.0 270.0l0 0c0 -119.2935 96.70648 -216.0 216.0 -216.0l0 0c57.286743 0 112.227234 22.75708 152.73505 63.26494c40.507874 40.50786 63.264954 95.4483 63.264954 152.73506l0 0c0 119.29352 -96.70648 216.0 -216.0 216.0l0 0c-119.29352 0 -216.0 -96.70648 -216.0 -216.0z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        stroke="#512e67"
-                                        stroke-width="4.0"
-                                        stroke-linejoin="round"
-                                        stroke-linecap="butt"
-                                        d="m264.0 270.0l0 0c0 -119.2935 96.70648 -216.0 216.0 -216.0l0 0c57.286743 0 112.227234 22.75708 152.73505 63.26494c40.507874 40.50786 63.264954 95.4483 63.264954 152.73506l0 0c0 119.29352 -96.70648 216.0 -216.0 216.0l0 0c-119.29352 0 -216.0 -96.70648 -216.0 -216.0z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        fill="#fdfdfd"
-                                        d="m343.71652 191.77953l272.56693 0l0 156.44093l-272.56693 0z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        stroke="#512e67"
-                                        stroke-width="4.0"
-                                        stroke-linejoin="round"
-                                        stroke-linecap="butt"
-                                        d="m343.71652 191.77953l272.56693 0l0 156.44093l-272.56693 0z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        fill="#fdfdfd"
-                                        d="m619.3648 191.93439l-137.10233 70.96063l-137.10239 -70.96063z"
-                                        fill-rule="evenodd"
-                                    />
-                                    <path
-                                        stroke="#512e67"
-                                        stroke-width="4.0"
-                                        stroke-linejoin="round"
-                                        stroke-linecap="butt"
-                                        d="m619.3648 191.93439l-137.10233 70.96063l-137.10239 -70.96063z"
-                                        fill-rule="evenodd"
-                                    />
-                                </g>
-                            </svg>
-                        </a>
+                <div class="column is-one-third">
+                    <div class="card">
+                        <span></span>
+                        <h3>Testing</h3>
+                        <div class="card-content">
+                            <div class="content">
+                                <p>
+                                    For testing ninja, testing is a skillful and
+                                    stealthy pursuit, where bugs are hunted with
+                                    precision in the intricate labyrinth of
+                                    code. This agile process ensures a flawless
+                                    software performance, embodying the art of
+                                    code mastery, and being a master in various
+                                    testing tools and methodologies
+                                </p>
+                                <br />
+
+                                <div class="tags are-medium is-centered">
+                                    <span class="tag is-normal is-rounded">
+                                        <b>Functional Testing</b>
+                                    </span>
+                                    <span class="tag is-normal is-rounded"
+                                        ><b>UI Testing</b></span
+                                    >
+                                    <span class="tag is-normal is-rounded"
+                                        ><b>Usability Testing</b></span
+                                    >
+                                    <span class="tag is-normal is-rounded"
+                                        ><b>API Testing</b></span
+                                    >
+                                    <span class="tag is-normal is-rounded"
+                                        ><b>Load Testing</b></span
+                                    >
+                                    <span class="tag is-normal is-rounded"
+                                        ><b>Performance Testing</b></span
+                                    >
+                                    <span class="tag is-normal is-rounded"
+                                        ><b>Smoke Testing</b>
+                                    </span>
+                                    <span class="tag is-normal is-rounded"
+                                        ><b>Sanity Testing</b>
+                                    </span>
+                                    <span class="tag is-normal is-rounded"
+                                        ><b>Regression Testing</b>
+                                    </span>
+                                    <span class="tag is-normal is-rounded"
+                                        ><b>Multiplatform Testing</b></span
+                                    >
+                                    <span class="tag is-normal is-rounded"
+                                        ><b>Automation Testing</b></span
+                                    >
+                                    <span class="tag is-normal is-rounded"
+                                        ><b>Python</b></span
+                                    >
+                                    <span class="tag is-normal is-rounded"
+                                        ><b>pytest</b></span
+                                    >
+                                    <span class="tag is-normal is-rounded"
+                                        ><b>unittests</b></span
+                                    >
+                                    <span class="tag is-normal is-rounded"
+                                        ><b>requests</b></span
+                                    >
+                                    <span class="tag is-normal is-rounded"
+                                        ><b>Selenium</b></span
+                                    >
+                                    <span class="tag is-normal is-rounded"
+                                        ><b>Postman</b></span
+                                    >
+                                    <span class="tag is-normal is-rounded"
+                                        ><b>Insomnia</b></span
+                                    >
+                                    <span class="tag is-normal is-rounded"
+                                        ><b>Baretail</b></span
+                                    >
+                                    <span class="tag is-normal is-rounded"
+                                        ><b>Clumsy</b></span
+                                    >
+                                    <span class="tag is-normal is-rounded"
+                                        ><b>JMeter</b></span
+                                    >
+                                    <span class="tag is-normal is-rounded"
+                                        ><b>ZeroMQ</b></span
+                                    >
+                                    <span class="tag is-normal is-rounded"
+                                        ><b>RabbitMQ</b></span
+                                    >
+                                    <span class="tag is-normal is-rounded"
+                                        ><b>Microsoft VMM</b></span
+                                    >
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <div class="column is-one-third">
+                    <div class="card">
+                        <span></span>
+                        <h3>Development</h3>
+                        <div class="card-content">
+                            <div class="content">
+                                <p>
+                                    For a Python sorceress, development is the
+                                    mystical journey of conjuring elegant spells
+                                    with the language's enchanting syntax,
+                                    crafting powerful incantations to shape
+                                    digital realms and bring forth software
+                                    magic. For a novice Python developer,
+                                    mastering the mystical arts requires
+                                    embracing professional tools that amplify
+                                    the coding skills and these tools is akin to
+                                    acquiring a magical wand
+                                </p>
+                                <br />
+                                <div class="tags are-medium is-centered">
+                                    <span class="tag is-normal is-rounded">
+                                        <b>Python</b>
+                                    </span>
+                                    <span class="tag is-normal is-rounded">
+                                        <b>Git</b>
+                                    </span>
+                                    <span class="tag is-normal is-rounded">
+                                        <b>VS Code</b>
+                                    </span>
+                                    <span class="tag is-normal is-rounded">
+                                        <b>Flask</b>
+                                    </span>
+                                    <span class="tag is-normal is-rounded">
+                                        <b>pytest</b>
+                                    </span>
+                                    <span class="tag is-normal is-rounded">
+                                        <b>unittests</b>
+                                    </span>
+                                    <span class="tag is-normal is-rounded">
+                                        <b>Web Scraping</b>
+                                    </span>
+                                    <span class="tag is-normal is-rounded">
+                                        <b>Python Scripting</b>
+                                    </span>
+                                    <span class="tag is-normal is-rounded">
+                                        <b>SQLite</b>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </footer>
-    </body>
-</html>
+        </div>
+    </div>
+</section>
+
+{% include "footer.html" %}

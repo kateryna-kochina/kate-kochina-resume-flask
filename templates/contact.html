@@ -1,0 +1,76 @@
+<!-- Additional page with contact form -->
+{% include "header.html" %}
+
+<div class="is-form-page">
+    <section id="appreciations-section" class="section has-text-centered">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-9">
+                    <h3 class="title">
+                        Thank you for reaching out! Your message will land in
+                        the virtual realm, and I'm thrilled to connect with you.
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-9">
+                    <form>
+                        <div class="field">
+                            <label class="label">
+                                <p>Name</p>
+                            </label>
+                            <div class="control">
+                                <input
+                                    class="input"
+                                    type="text"
+                                    placeholder=""
+                                />
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Email</label>
+                            <div class="control">
+                                <input
+                                    class="input"
+                                    type="email"
+                                    placeholder=""
+                                />
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Message</label>
+                            <div class="control">
+                                <textarea
+                                    class="textarea"
+                                    placeholder=""
+                                ></textarea>
+                            </div>
+                        </div>
+
+                        <div
+                            id="submit-btn"
+                            class="container has-text-centered"
+                        >
+                            <div class="control is-centered">
+                                <button
+                                    class="button is-primary is-outlined is-rounded"
+                                >
+                                    <strong>Submit</strong>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% include "footer.html" %}
