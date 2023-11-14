@@ -71,7 +71,6 @@ form {
 
 .label {
     display: block;
-    /* font-weight: 500; */
 }
 
 .navbar-end {
@@ -95,6 +94,11 @@ form {
 
 #appreciations-section {
     margin: 25px;
+}
+
+#copyright {
+    margin: 25px;
+    font-size: 9px;
 }
 
 #greetings {
